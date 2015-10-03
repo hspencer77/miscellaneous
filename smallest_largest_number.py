@@ -14,7 +14,7 @@ def get_options():
                         help=("Use built-in python sorted() or " +
                               "custom sort function; default " +
                               "behavior is custom sort function"))
-    parser.add_argument('numbers', nargs='+',
+    parser.add_argument('number', nargs='+',
                         type=float,
                         help="List of numbers")
     options = parser.parse_args()
@@ -45,10 +45,10 @@ def sort_em(list):
 if __name__ == "__main__":
     options = get_options()
     if options.built_in:
-        print "Smallest numeric value: " + str(sorted(options.numbers)[0])
-        print "Largest numeric value: " + str(sorted(options.numbers)[-1])
+        print "Smallest numeric value: " + str(sorted(options.number)[0])
+        print "Largest numeric value: " + str(sorted(options.number)[-1])
     else:
-        sort_em(options.numbers)
-        print "Smallest numeric value: " + str(options.numbers[0])
-        print "Largest numeric value: " + str(options.numbers[-1])
+        sort_em(options.number)
+        print "Smallest numeric value: " + str(options.number[0])
+        print "Largest numeric value: " + str(options.number[-1])
     sys.exit()
