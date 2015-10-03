@@ -30,7 +30,7 @@ def sort_em(list):
     because of two factors:
     - storage efficiency
     - stable (i.e. any elements that are equal retain their initial relative
-      ordering
+      ordering)
     """
     for position in range(len(list)-1, 0, -1):
         largest_seat = 0
